@@ -14,9 +14,16 @@ public class MainTests extends BaseUI {
     String name = "oleg";
     String email = "11111@gmail.com";
     String getname = "vvvv";
+    By registrationButton = By.xpath("//button[@id='show-registration-block']");
+    By getTextFieldEmail = By.cssSelector("input[id='email']");
+    String getEmail = "2222@gmail.com";
+    By textFieldPassword = By.cssSelector("input[id='password']");
+    String Password = "12345678";
+    By nextButton =  By.xpath("//button[@data-action='next-page'][text()='Next']");
+
 
     @Test
-    public void mainPageTests20() {
+    public void contactAdministratorTests1() {
         driver.findElement(blogButton).click();
         driver.findElement(agencyButton).click();
         driver.findElement(footermenuButton).click();
@@ -25,15 +32,9 @@ public class MainTests extends BaseUI {
         driver.findElement(gettextFieldName).sendKeys(getname);
         driver.findElement(sendButton).click();
     }
-    By registrationButton = By.xpath("//button[@id='show-registration-block']");
-    By getTextFieldEmail = By.cssSelector("input[id='email']");
-    String getEmail = "2222@gmail.com";
-    By textFieldPassword = By.cssSelector("input[id='password']");
-    String Password = "12345678";
-    By nextButton =  By.xpath("//button[@data-action='next-page'][text()='Next']");
 
     @Test
-    public void mainPageTests21(){
+    public void getStartedTests2(){
         driver.findElement(registrationButton).click();
         driver.findElement(getTextFieldEmail).sendKeys(getEmail);
         driver.findElement(textFieldPassword).sendKeys(Password);
