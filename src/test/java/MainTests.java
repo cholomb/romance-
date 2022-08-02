@@ -16,10 +16,12 @@ public class MainTests extends BaseUI {
     String getname = "vvvv";
     By registrationButton = By.xpath("//button[@id='show-registration-block']");
     By getTextFieldEmail = By.cssSelector("input[id='email']");
-    String getEmail = "2222@gmail.com";
     By textFieldPassword = By.cssSelector("input[id='password']");
-    String Password = "12345678";
     By nextButton =  By.xpath("//button[@data-action='next-page'][text()='Next']");
+    By nicknameTextField = By.xpath("//input[@id='nickname']");
+    String getEmail = "2222@gmail.com";
+    String Password = "12345678";
+    String nickname = "Messi";
 
 
     @Test
@@ -39,6 +41,7 @@ public class MainTests extends BaseUI {
         driver.findElement(getTextFieldEmail).sendKeys(getEmail);
         driver.findElement(textFieldPassword).sendKeys(Password);
         driver.findElement(nextButton).click();
+        driver. findElement(nicknameTextField).sendKeys(nickname);
     }
 
 
