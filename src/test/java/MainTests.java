@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -31,6 +32,8 @@ public class MainTests extends BaseUI {
     By confirmationCheckbox = By.xpath("//input[@id='confirmation']");
     By regionNameAutoComplete = By.xpath("//input[@name='region_name']");
     By selectedCityofSpain = By.xpath("//div[contains(@id,'region_select')]//li[text()='Barcelona, Spain'][@country='ES']");
+    By youtubeFrameLocator = By.xpath("src='https://www.youtube.com/embed/RRECuJzm3IY?start=85'");
+    By playYoutubeButton = By.xpath("//button[@aria-label='Смотреть']");
     String getEmail = "2222@gmail.com";
     String password = "12345678";
     String nickname = "Messi";
@@ -68,6 +71,13 @@ public class MainTests extends BaseUI {
         driver.findElement(regionNameAutoComplete).sendKeys(city);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.findElement(selectedCityofSpain).click();
+    }
+    @Test
+    public void testIframe(){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
+        WebElement youtubeIframe = driver.findElement(youtubeFrameLocator);
+        driver.switchTo().frame(youtubeIframe);
+        driver.findElement(playYoutubeButton).click();
     }
 
 
