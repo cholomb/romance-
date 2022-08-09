@@ -32,8 +32,8 @@ public class MainTests extends BaseUI {
     By confirmationCheckbox = By.xpath("//input[@id='confirmation']");
     By regionNameAutoComplete = By.xpath("//input[@name='region_name']");
     By selectedCityofSpain = By.xpath("//div[contains(@id,'region_select')]//li[text()='Barcelona, Spain'][@country='ES']");
-    By youtubeFrameLocator = By.xpath("src='https://www.youtube.com/embed/RRECuJzm3IY?start=85'");
-    By playYoutubeButton = By.xpath("//button[@aria-label='Смотреть']");
+    By youtubeFrameLocator = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
+    By playYoutubeButton = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
     String getEmail = "2222@gmail.com";
     String password = "12345678";
     String nickname = "Messi";
