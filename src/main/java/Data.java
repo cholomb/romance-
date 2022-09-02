@@ -8,4 +8,6 @@ public class Data {
     public static final String nickname = "Messi";
     public static final String phone = "10101010";
     public static final String city = "Barcelona";
+    public static final String registrationData = "Registration date";
+    public static final String registrationDataValue = "date_created";
 }
