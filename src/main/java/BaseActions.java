@@ -1,6 +1,8 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -50,9 +52,30 @@ public class BaseActions {
     }
     public void mouseClick(By locator){
         WebElement element = driver.findElement(locator);
-        //new Action(driver)
-                //.moveToElement(element)
-                //.click();
+        new Actions(driver)
+                .moveToElement(element)
+                .click()
+                .perform();
+
+
     }
+    public void mouseScroll(By locator){
+        WebElement element = driver.findElement(locator);
+        new Actions(driver)
+                .scrollToElement(element)
+                .perform();
+    }
+
+    public void jsClick(By locator){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement element =driver.findElement(locator);
+        js.executeScript("arguments[0].click();", element);
+    }
+    public void jsScroll(By locator){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement element =driver.findElement(locator);
+        js.executeScript("arguments[0].scrollIntoView();",element);
+    }
+
 }
 

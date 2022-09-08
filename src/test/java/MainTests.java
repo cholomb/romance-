@@ -22,6 +22,11 @@ public class MainTests extends BaseUI {
         mainPage.swithToYoutubeFrame();
         mainPage.clickPlayYoutube();
     }
+    @Test
+    public void testFooter(){
+        mainPage.jsScroll(Locators.PHONE_LINK);
+        mainPage.jsClick(Locators.PHONE_LINK);
 
+    }
 
 }

@@ -19,7 +19,8 @@ public class MainPage extends BaseActions {
 
     }
     public void clickGalleryLink(){
-        driver.findElement(Locators.GALLERY_LINK).click();
+        driver.findElement(Locators.GALLERY_LINK);
+        mouseClick(Locators.GALLERY_LINK);
     }
 
     public void swithToYoutubeFrame(){
