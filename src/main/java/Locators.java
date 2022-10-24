@@ -31,7 +31,8 @@ public class Locators {
     public static final By REGIONNAME_AUTOCOMPLETE = By.xpath("//input[@name='region_name']");
     public static final By SELECTEDCITY_OFSPAIN = By.xpath("//div[contains(@id,'region_select')]//li[text()='Barcelona, Spain'][@country='ES']");
     public static final By YOUTUBE_FRAMELOCATOR = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
-    public static final By PLAYYOUTUBE_BUTTON = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
+    public static final By PLAYYOUTUBE_BUTTON = By.xpath("//button[@class='ytp-large-play-button ytp-button ytp-large-play-button-red-bg']");
+    public static final By TAB_LINKS = By.xpath("//a[contains(@class,'nav-link')]");
 
     //Gallery
     public static final By SORT_DROP_DOWN = By.xpath("//select[contains(@id,'sorter-select')]");
